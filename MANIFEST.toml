@@ -1,0 +1,27 @@
+uuid = "910bba9b-6259-43ac-9ceb-c8d2b6908c18"
+name = "Keep Only Tags"
+authors = ["Bob Swift"]
+description = "This plugin allows the user to determine which tags are written to the output files by Picard."
+api = ['3.0']
+license = "GPL-2.0-or-later"
+license_url = "https://www.gnu.org/licenses/gpl-2.0.html"
+long_description = """
+**Use with caution, because any tags not included in the user's "keep" list will not be written to the output files.**
+
+This plugin allows the user to determine which tags are written to the
+output files by Picard. Tags that you wish to keep are entered in a page
+in the options settings, with each tag on a separate line. Blank lines
+will be ignored. The entries are not case-sensitive.
+
+If a tag in the list ends with an asterisk (`*`), then it will keep any tags
+beginning with the tag. For example, if your list contains "`performer:*`"
+then all tags beginning with "`performer:`" will be kept, such as
+"`performer:instrument`" and "`performer:vocals`".
+
+All tags that are removed will still be available as variables with "`_ko_`"
+prepended to the tag name. For example, if you choose not to keep the
+"`musicbrainz_trackid`" tag, it will still be available to scripts as
+"`%_ko_musicbrainz_trackid%`".
+"""
+categories = ["metadata"]
+homepage = "https://picard-plugins-user-guides.readthedocs.io/en/latest/keep_only_tags/user_guide.html"

@@ -1,0 +1,14 @@
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+__pycache__/
+
+# Environments and development tools
+.venv/
+.ruff_cache/
+
+/.project
+/picard
+/developer_notes.txt
+*.orig
+__pycache__
+*.pyc
