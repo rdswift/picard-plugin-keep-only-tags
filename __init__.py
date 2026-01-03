@@ -102,11 +102,10 @@ def enable(api: PluginApi):
     # Register options page
     api.register_options_page(KeepOnlyTagsOptionsPage)
 
-    # Register the plugin to run at a LOW priority so that other plugins that
-    # modify the tag information can complete their processing and this plugin
-    # is working with the latest updated data.
-    api.register_album_metadata_processor(plugin.update_tags, priority=-200)
-    api.register_track_metadata_processor(plugin.update_tags, priority=-200)
+    # Register the plugin to run at a HIGH priority so that it is working with
+    # the standard tags provided by MusicBrainz.
+    api.register_album_metadata_processor(plugin.update_tags, priority=1000)
+    api.register_track_metadata_processor(plugin.update_tags, priority=1000)
 
 
 def migrate_settings(api: PluginApi):
