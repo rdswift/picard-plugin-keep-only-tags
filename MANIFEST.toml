@@ -27,3 +27,4 @@ if you choose not to keep the "`musicbrainz_trackid`" tag, it will still be avai
 """
 categories = ["metadata"]
 homepage = "https://picard-plugins-user-guides.readthedocs.io/en/latest/keep_only_tags/user_guide.html"
+report_bugs_to = "https://github.com/rdswift/picard-plugin-keep-only-tags/issues"
