@@ -21,3 +21,9 @@ This plugin reads the album and track metadata provided to Picard and converts a
 ## Caution
 
 Any tags not included in the user's "keep" list are not available for use in scripts, including the file naming script. To accommodate the use of standard tags in the file naming script that have not been included in the "keep" list, you can include lines such as `$set(album,$if2(%album%,%_ko_album%))` at the beginning of file naming script for each of the tags used.
+
+---
+
+## Contributing
+
+Please see the [Contribution Guidelines for MusicBrainz Picard Plugins](https://github.com/metabrainz/picard-plugins-registry/blob/main/PLUGIN_CONTRIBUTING.md) on how to help with development of this plugin.
