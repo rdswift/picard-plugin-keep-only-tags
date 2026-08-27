@@ -21,7 +21,7 @@ from picard.plugin3.api import (
     PluginApi,
     t_,
 )
-from picard.tags import visible_tag_names
+from picard.tags import tag_names
 
 from .ui_options_keep_only_tags import Ui_KeepOnlyTagsOptionsPage
 
@@ -91,7 +91,7 @@ def enable(api: PluginApi):
     plugin = KeepOnlyTagsPlugin(api)
 
     # Register configuration options
-    api.plugin_config.register_option("keep_only_tags_list", '\n'.join(list(visible_tag_names())))
+    api.plugin_config.register_option("keep_only_tags_list", '\n'.join(list(tag_names())))
 
     # Migrate settings from 2.x version if available
     migrate_settings(api)
