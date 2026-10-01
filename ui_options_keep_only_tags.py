@@ -38,6 +38,9 @@ class Ui_KeepOnlyTagsOptionsPage(object):
         self.verticalLayout.addWidget(self.page_text)
         spacerItem = QtWidgets.QSpacerItem(20, 6, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Fixed)
         self.verticalLayout.addItem(spacerItem)
+        self.cb_verbose_log = QtWidgets.QCheckBox(parent=KeepOnlyTagsOptionsPage)
+        self.cb_verbose_log.setObjectName("cb_verbose_log")
+        self.verticalLayout.addWidget(self.cb_verbose_log)
         self.tags_list_title = QtWidgets.QLabel(parent=KeepOnlyTagsOptionsPage)
         font = QtGui.QFont()
         font.setBold(True)
@@ -51,11 +54,14 @@ class Ui_KeepOnlyTagsOptionsPage(object):
 
         self.retranslateUi(KeepOnlyTagsOptionsPage)
         QtCore.QMetaObject.connectSlotsByName(KeepOnlyTagsOptionsPage)
+        KeepOnlyTagsOptionsPage.setTabOrder(self.cb_verbose_log, self.tags_list_text)
 
     def retranslateUi(self, KeepOnlyTagsOptionsPage):
         _translate = QtCore.QCoreApplication.translate
         KeepOnlyTagsOptionsPage.setWindowTitle(_translate("KeepOnlyTagsOptionsPage", "form.title"))
         self.page_title.setText(_translate("KeepOnlyTagsOptionsPage", "page.title"))
         self.page_text.setText(_translate("KeepOnlyTagsOptionsPage", "page.text"))
+        self.cb_verbose_log.setToolTip(_translate("KeepOnlyTagsOptionsPage", "checkbox.verbose_logging.tooltip"))
+        self.cb_verbose_log.setText(_translate("KeepOnlyTagsOptionsPage", "checkbox.verbose_logging.text"))
         self.tags_list_title.setText(_translate("KeepOnlyTagsOptionsPage", "section.tags_list.title"))
         self.tags_list_text.setPlaceholderText(_translate("KeepOnlyTagsOptionsPage", "section.tags_list.placeholder"))
