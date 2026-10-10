@@ -1,1 +1,12 @@
+"manifest.description" = "此插件允许用户确定 Picard 写入输出文件的哪些标签。"
+"manifest.long_description" = "**请谨慎使用，因为不在用户 \"keep\" 列表中的任何标签都不会写入输出文件。** 像往常一样，建议您首先在文件的小子集的 **副本** 上测试您的设置，以确保结果符合预期。\n\n此插件为用户提供了一种不同的方法来确定哪些标签将被 Picard 写入输出文件。如果用户只想保留 MusicBrainz 提供的标签的小子集，他们可以指定他们只想保留的标签，而不是编写一个冗长的 tagger 脚本来删除他们不想要的标签。\n\n您希望保留的标签输入在选项设置的页面中，每个标签占一行。空白行将被忽略。条目不区分大小写。\n\n如果列表中的标签以星号 (`*`) 结尾，则它将保留以该标签开头的任何标签。例如，如果您的列表包含 \"`performer:*`\"，则所有以 \"`performer:`\" 开头的标签都将被保留，例如 \"`performer:instrument`\" 和 \"`performer:vocals`\"。\n\n所有被删除的标签仍然可用，但标签名前会加上 \"`_ko_`\" 作为变量。例如，如果您选择不保留 \"`musicbrainz_trackid`\" 标签，它仍然可用于脚本作为 \"`%_ko_musicbrainz_trackid%`\"。"
+"manifest.name" = "仅保留标签"
+"qt.KeepOnlyTagsOptionsPage.checkbox.verbose_logging.text" = "极详细的调试日志记录"
+"qt.KeepOnlyTagsOptionsPage.checkbox.verbose_logging.tooltip" = "记录所有转换为变量的专辑和音轨标签。通常仅用于初始设置和调试。"
+"qt.KeepOnlyTagsOptionsPage.form.title" = "仅保留标签设置"
+"qt.KeepOnlyTagsOptionsPage.page.text" = "这些设置将决定 Picard 写入输出文件哪些标签。您希望保留的标签输入在下方，每个标签占一行。空行将被忽略。输入不区分大小写。\n\n**请谨慎使用，因为用户\"保留\"列表中未包含的任何标签都不会写入输出文件。**\n\n如果列表中的标签以星号（`*`）结尾，则它将保留以该标签开头的任何标签。例如，如果您的列表包含 \"`performer:*`\"，则所有以 \"`performer:`\" 开头的标签都将被保留，例如 \"`performer:instrument`\" 和 \"`performer:vocals`\"。\n\n所有被删除的标签仍然可用作变量，标签名前会加上 \"`_ko_`\"。例如，如果您选择不保留 \"`musicbrainz_trackid`\" 标签，它仍然可用于脚本作为 \"`%_ko_musicbrainz_trackid%`\"。"
+"qt.KeepOnlyTagsOptionsPage.page.title" = "仅保留标签"
+"qt.KeepOnlyTagsOptionsPage.section.tags_list.placeholder" = "要保留的标签（每行一个）"
+"qt.KeepOnlyTagsOptionsPage.section.tags_list.title" = "要保留的标签"
+"ui.title" = "仅保留标签"
 
