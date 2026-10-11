@@ -1,7 +1,7 @@
 uuid = "910bba9b-6259-43ac-9ceb-c8d2b6908c18"
 name = "Keep Only Tags"
 authors = ["Bob Swift"]
-description = "This plugin provides a different approach for the user to determine which tags are written to the output files by Picard."
+description = "This plugin allows the user to determine which tags are written to the output files by Picard."
 api = ['3.0']
 license = "GPL-2.0-or-later"
 license_url = "https://www.gnu.org/licenses/gpl-2.0.html"
@@ -28,3 +28,15 @@ if you choose not to keep the "`musicbrainz_trackid`" tag, it will still be avai
 categories = ["metadata"]
 homepage = "https://picard-plugins-user-guides.readthedocs.io/en/latest/keep_only_tags/user_guide.html"
 report_bugs_to = "https://github.com/rdswift/picard-plugin-keep-only-tags/issues"
+
+[name_i18n]
+fr = "Conserver uniquement les balises"
+zh_CN = "仅保留标签"
+
+[description_i18n]
+fr = "Ce plugin permet à l'utilisateur de choisir les balises que Picard doit ajouter aux fichiers de sortie."
+zh_CN = "此插件允许用户确定 Picard 写入输出文件的哪些标签。"
+
+[long_description_i18n]
+fr = "**À utiliser avec précaution, car toutes les balises ne figurant pas dans la liste « à conserver » de l'utilisateur ne seront pas écrites dans les fichiers de sortie.** Comme toujours, il est recommandé de tester d'abord votre configuration sur une **copie** d'un petit sous-ensemble de fichiers afin de vous assurer que les résultats correspondent à vos attentes.\n\nCe plugin offre à l'utilisateur une approche différente pour déterminer quelles balises sont écrites dans les fichiers de sortie par Picard. Si l'utilisateur souhaite ne conserver qu'un petit sous-ensemble des balises fournies par MusicBrainz, il peut spécifier uniquement les balises qu'il souhaite conserver plutôt que de développer un long script de balisage pour supprimer toutes les balises dont il ne veut pas.\n\nLes balises que vous souhaitez conserver sont saisies dans une page des paramètres d'options, chaque balise sur une ligne distincte. Les lignes vides seront ignorées. Les entrées ne sont pas sensibles à la casse.\n\nSi une balise de la liste se termine par un astérisque (`*`), toutes les balises commençant par cette balise seront conservées. Par exemple, si votre liste contient « `performer:*` », toutes les balises commençant par « `performer:` » seront conservées, telles que « `performer:instrument` » et « `performer:vocals` ».\n\nToutes les balises supprimées resteront disponibles en tant que variables, avec « `_ko_` » ajouté au début du nom de la balise. Par exemple, si vous choisissez de ne pas conserver la balise « `musicbrainz_trackid` », celle-ci restera disponible pour les scripts sous la forme « `%_ko_musicbrainz_trackid%` »."
+zh_CN = "**请谨慎使用，因为不在用户 \"keep\" 列表中的任何标签都不会写入输出文件。** 像往常一样，建议您首先在文件的小子集的 **副本** 上测试您的设置，以确保结果符合预期。\n\n此插件为用户提供了一种不同的方法来确定哪些标签将被 Picard 写入输出文件。如果用户只想保留 MusicBrainz 提供的标签的小子集，他们可以指定他们只想保留的标签，而不是编写一个冗长的 tagger 脚本来删除他们不想要的标签。\n\n您希望保留的标签输入在选项设置的页面中，每个标签占一行。空白行将被忽略。条目不区分大小写。\n\n如果列表中的标签以星号 (`*`) 结尾，则它将保留以该标签开头的任何标签。例如，如果您的列表包含 \"`performer:*`\"，则所有以 \"`performer:`\" 开头的标签都将被保留，例如 \"`performer:instrument`\" 和 \"`performer:vocals`\"。\n\n所有被删除的标签仍然可用，但标签名前会加上 \"`_ko_`\" 作为变量。例如，如果您选择不保留 \"`musicbrainz_trackid`\" 标签，它仍然可用于脚本作为 \"`%_ko_musicbrainz_trackid%`\"。"
